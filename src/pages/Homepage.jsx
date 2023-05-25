@@ -7,6 +7,7 @@ const Homepage = () => {
     // create state to hold the products data
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);
+    const [category, setProductsCategory] = useState([]);
     // show all products when the page is loading
     // https://fakestoreapi.com/products
     // set up the useEffect when the page loads
@@ -38,24 +39,33 @@ const Homepage = () => {
             });
     };
 
-    
+    const selectCategory = (category) => {
+        axios.get(`https://fakestoreapi.com/products/category/${category}`)
+            .then(response => {
+                console.log(response)
+                setProductsCategory(response.data);
+                })
+            .catch(error => {
+                console.log(error);
+            })
+    }
 
 
     return (
         <div className="homepage-container">
             <div className="category-list">
                 {['All', ...categories].map(category => (
-                    <p key={category} >{category}</p>
+                    <p key={category} onClick={() => selectCategory(category)}>{category}</p>
                 ))}
             </div>
             <div className="products-container">
-                {
-                    products.map(item=><ProductCard
-                        key={item.id}
-                        product={item}
-                    />)
-                    // products.map(item=><p>{item.title}</p>)
-                }
+                {category.length === 0
+                    ? products.map((item) => (
+                        <ProductCard key={item.id} product={item} />
+                    ))
+                    : category.map((item) => (
+                        <ProductCard key={item.id} product={item} />
+                    ))}
             </div>
         </div>
     );

@@ -2,13 +2,14 @@
 import './ProductCard.css';
 
 
-const ProductCard = ({product}) => {
+const ProductCard = ({ product }) => {
+
     return (
         <div className="product-card">
             <div className="image-container">
                 <img src={product.image}/>
             </div>
-            <a href="#">
+            <a href={`/products/${product.id}`}>
                 <p className="product-title ellipsis-text">{product.title}</p>
                 <p className="product-category">{product.category}</p>
                 <p className="product-price">{product.price}€</p>

@@ -1,6 +1,7 @@
 .homepage-container {
     padding-inline: 129px;
     margin-top: 25px;
+    min-height: 80vh;
 }
 
 .products-container {
@@ -16,6 +17,7 @@
     display: flex;
     margin-top: 50px;
     margin-bottom: 21px;
+    flex-wrap: wrap;
 }
 
 .category-list p {
@@ -26,6 +28,7 @@
     text-transform: capitalize;
     margin-right: 28px;
     cursor: pointer;
+    margin-bottom: 14px;
 }
 
 @media (max-width: 940px) {
@@ -35,6 +38,12 @@
     .products-container {
         column-gap: 38px;
         row-gap: 66px;
+    }
+}
+
+@media (max-width: 795px) {
+    .category-list {
+        justify-content: center;
     }
 }
 

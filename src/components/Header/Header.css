@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap');
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 79px;
+    background-color: var(--light-gray);
+}
+
+.header-container h1 {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    color: var(--logo-col);
+    width: 200px;
+    text-align: center;
+}
+
+.shopping-cart-icon {
+    margin-right: 44px;
+}

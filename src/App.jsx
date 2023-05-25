@@ -1,12 +1,18 @@
 import { useState } from 'react'
 import './App.css'
+import Header from "./components/Header/Header.jsx";
+import Homepage from "./pages/Homepage.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1>Vite + React</h1>
+        <Header />
+        <Homepage />
+        <Footer />
     </>
   )
 }

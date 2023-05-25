@@ -1,0 +1,47 @@
+.footer-container {
+    background-color: var(--blue-col);
+    height: 66px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container p {
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--white-col);
+    margin-left: 34px;
+    font-family: Inter;
+}
+
+.heart-icon {
+    color: var(--white-col);
+    font-size: 10px;
+}
+
+.footer-container button {
+    background-color: var(--blue-col);
+    color: var(--white-col);
+    border: none;
+    margin-right: 41px;
+    font-size: 12px;
+    font-family: Inter;
+}
+
+@media (max-width: 428px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .footer-container p{
+        margin-left: 0;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .footer-container button{
+        margin-right: 0;
+    }
+}

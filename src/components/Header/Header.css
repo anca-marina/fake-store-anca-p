@@ -22,3 +22,10 @@
 .shopping-cart-icon {
     margin-right: 44px;
 }
+
+@media (max-width: 744px) {
+    .header-container h1{
+        width: 160px;
+    }
+}
+

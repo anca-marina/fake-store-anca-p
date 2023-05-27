@@ -15,9 +15,10 @@ body{
   --logo-col: rgba(58, 72, 149, 1);
   --black-col: rgba(40, 40, 40, 1);
   --gray-col: rgba(148, 148, 148, 1);
+  --light-gray: rgba(239, 239, 239, 1);
+  --mid-gray: rgba(180, 180, 180, 1);
   --white-col: rgba(252, 252, 252, 1);
   --blue-col: rgba(82, 100, 195, 1);
   --yellow-col: rgba(255, 216, 20, 1);
   --red-col: rgba(249, 5, 5, 1);
-  --light-gray: rgba(239, 239, 239, 1);
 }

@@ -1,0 +1,130 @@
+.contact-us-page {
+    height: 90vh;
+}
+
+.form-container {
+    width: 65vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: 21vw;
+    background-color: var(--white-col);
+    padding: 5vh 19vw 29vh 20vw;
+    align-items: center;
+}
+
+.form-container h2 {
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    color: var(--black-col);
+    margin-bottom: 5vh;
+    text-align: center;
+}
+
+.form-container form {
+    width: 20vw;
+    height: auto;
+    margin-bottom: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container input {
+    margin-bottom: 3vh;
+    height: 4vh;
+    width: 25vw;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--mid-gray);
+    padding: 1vw;
+}
+
+.form-container textarea {
+    width: 25vw;
+    min-height: 10vh;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--mid-gray);
+    padding: 1vw;
+}
+
+.form-container input::placeholder{
+    color: var(--white-col);
+    font-family: Inter;
+    font-size: 14px;
+}
+
+.form-container textarea::placeholder{
+    color: var(--white-col);
+    font-family: Inter;
+    font-size: 15px;
+}
+
+.form-container button {
+    height: 41px;
+    width: 156px;
+    color: var(--white-col);
+    background-color: var(--blue-col);
+    border: none;
+    font-size: 14px;
+    font-family: Inter;
+    line-height: 17px;
+}
+
+@media (max-width: 744px) {
+    .form-container {
+        margin-top: 15vh;
+        width: 80vw;
+        height: auto;
+        margin-left: 10vw;
+        padding-inline: 0 0;
+        align-items: center;
+    }
+
+    .form-container h2 {
+        width: 186px;
+    }
+
+    .form-container form{
+        width: 60vw;
+        margin-left: 0;
+        margin-bottom: 3vh;
+    }
+
+    .form-container input {
+        width: 60vw;
+    }
+
+    .form-container textarea {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 428px) {
+    .contact-us-page {
+        height: 200vh;
+    }
+    .form-container {
+        margin-top: 10vh;
+    }
+
+    .form-container h2 {
+        margin-top: 5vh;
+    }
+
+    .form-container form input{
+        height: 41px;
+    }
+    .form-container textarea {
+        margin-bottom: 2vh;
+    }
+
+    .form-container button{
+        width: 24vw;
+        margin-bottom: 15vh;
+    }
+}

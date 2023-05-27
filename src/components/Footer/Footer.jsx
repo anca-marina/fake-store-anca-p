@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className="footer-container">
             <p>Made with <FaHeart className="heart-icon"/> by Anca Petrea</p>
-            <button>Contact Us</button>
+            <a href="/contact-us">Contact Us</a>
         </div>
     );
 };

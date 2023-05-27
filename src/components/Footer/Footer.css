@@ -19,13 +19,14 @@
     font-size: 10px;
 }
 
-.footer-container button {
+.footer-container a {
     background-color: var(--blue-col);
     color: var(--white-col);
     border: none;
     margin-right: 41px;
     font-size: 12px;
     font-family: Inter;
+    text-decoration: none;
 }
 
 @media (max-width: 428px) {

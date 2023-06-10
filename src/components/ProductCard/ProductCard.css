@@ -7,6 +7,7 @@
     background-color: var(--white-col);
     border-radius: 8px;
     padding: 16px;
+    position: relative;
 }
 
 .product-card a{
@@ -58,4 +59,15 @@
     font-size: 12px;
     font-weight: 600;
     margin-top: 11px;
+}
+
+.prod-heart-icon {
+    color: black;
+    font-size:20px;
+    cursor:pointer;
+    margin-right: 22px;
+    margin-top: 22px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }

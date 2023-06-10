@@ -6,6 +6,8 @@ import Footer from "./components/Footer/Footer.jsx";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import ProductDetails from "./pages/ProductDetails/ProductDetails.jsx";
 import ContactUs from "./pages/ContactUs/ContactUs.jsx";
+import FavoritesContextProvider from "./Context/Context.jsx";
+
 
 
 
@@ -14,15 +16,17 @@ function App() {
 
   return (
     <BrowserRouter>
-        <Header />
+        <FavoritesContextProvider>
+            <Header />
 
-        <Routes>
-            <Route path='/' element={<Homepage />}  />
-            <Route path='/products/:productId' element={<ProductDetails />} />
-            <Route path='/contact-us' element={<ContactUs />} />
-        </Routes>
+            <Routes>
+                <Route path='/' element={<Homepage />}  />
+                <Route path='/products/:productId' element={<ProductDetails />} />
+                <Route path='/contact-us' element={<ContactUs />} />
+            </Routes>
 
-        <Footer />
+            <Footer />
+        </FavoritesContextProvider>
     </BrowserRouter>
   )
 }

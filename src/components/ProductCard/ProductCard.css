@@ -1,7 +1,7 @@
 .product-card {
     display: flex;
     flex-direction: column;
-    height: 248px;
+    min-height: 248px;
     width: 183px;
     align-items: center;
     background-color: var(--white-col);
@@ -18,7 +18,7 @@
 
 .image-container {
     width: 151px;
-    height: 153px;
+    min-height: 153px;
     display: flex;
     align-items: center;
     justify-content: center;

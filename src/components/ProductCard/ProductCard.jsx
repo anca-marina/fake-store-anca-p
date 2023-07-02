@@ -1,6 +1,7 @@
 //import React from 'react';
 import './ProductCard.css';
 import { FaHeart, FaRegHeart } from "react-icons/fa"
+// import { BiSolidHeartCircle } from "react-icons/bi";
 import {useContext} from "react";
 import {FavoritesContext} from "../../Context/Context.jsx";
 

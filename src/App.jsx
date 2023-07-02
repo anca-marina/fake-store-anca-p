@@ -7,6 +7,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import ProductDetails from "./pages/ProductDetails/ProductDetails.jsx";
 import ContactUs from "./pages/ContactUs/ContactUs.jsx";
 import FavoritesContextProvider from "./Context/Context.jsx";
+import Checkout from "./pages/Checkout/Checkout.jsx";
 
 
 
@@ -21,6 +22,7 @@ function App() {
 
             <Routes>
                 <Route path='/' element={<Homepage />}  />
+                <Route path='/shoppingCart' element={<Checkout />}  />
                 <Route path='/products/:productId' element={<ProductDetails />} />
                 <Route path='/contact-us' element={<ContactUs />} />
             </Routes>

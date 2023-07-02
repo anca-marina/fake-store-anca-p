@@ -1,0 +1,138 @@
+.shopping-cart-page {
+    height: auto;
+    min-height: 80dvh;
+}
+
+.shopping-cart-container {
+    width: 65dvw;
+    height: auto;
+    background-color: white;
+    margin-bottom: 7dvh;
+    margin-top: 8dvh;
+    margin-left: 21dvw;
+}
+
+/* CSS for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* CSS for table header */
+thead {
+    border-bottom: 2px solid var(--table-gray);
+    color: var(--mid-gray);
+}
+
+th {
+    padding-top: 15px;
+    padding-bottom: 7px;
+    text-align: center;
+    font-weight: 500;
+    font-family: Inter;
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--table-text);
+}
+
+th#item {
+    width: 25dvw;
+    padding-left: 5dvw;
+    text-align: left;
+}
+
+tr {
+    border-bottom: 2px solid var(--table-gray);
+}
+
+th#remove {
+    padding-right: 2dvw;
+}
+
+/* CSS for table body */
+tbody {
+    font-size: 14px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* CSS for specific table cells */
+td:nth-child(1) {
+    /* Styles for the first column - image and product title*/
+    width: 35vw;
+    display: flex;
+    align-items: center;
+    gap: 4dvw;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+td:nth-child(2) {
+    /* Styles for the second column - price */
+    font-size: 24px;
+    font-weight: 600;
+}
+
+td:nth-child(3) {
+    /* Styles for the third column - quantity*/
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.product-image {
+    width: 8dvw;
+    object-fit: cover;
+    margin-left: 2dvw;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    font-family: Inter;
+}
+
+.checkout-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 3dvh;
+}
+
+.checkout-footer p{
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    padding-right: 8dvw;
+}
+
+.checkout-footer button{
+    margin-top: 6dvh;
+    background-color: var(--yellow-col);
+    border: none;
+    height: 41px;
+    width: 156px;
+    margin-right: 3dvw;
+    margin-bottom: 16dvh;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@media (max-width: 744px) {
+    .shopping-cart-page {
+        height: 100dvh;
+    }
+    .shopping-cart-container {
+        width: 91dvw;
+        height: auto;
+        margin-left: 5dvw;
+        margin-bottom: 40dvh;
+    }
+
+    .td:nth-child(1){
+        width: 36vw;
+    }
+}

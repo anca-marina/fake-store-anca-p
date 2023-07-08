@@ -2,8 +2,8 @@ import {useState, createContext, useEffect} from "react";
 
 export const FavoritesContext = createContext();
 
-export default function FavoritesContextProvider(props) {
-    // Create my global state to hold the fav characters
+export default function ShoppingCartContextProvider(props) {
+    // Create my global state to hold the fav products
     const [favorites, setFavorites] = useState([]);
 
     // useEffect(
@@ -28,7 +28,7 @@ export default function FavoritesContextProvider(props) {
     // function to add character to favorites
     const addProduct = (prodToAdd) => {
         console.log('adding', prodToAdd)
-        // add this character to state
+        // add this product to array
         let newFavorites=[...favorites, prodToAdd];
         console.log(newFavorites);
         // store in state
@@ -36,7 +36,7 @@ export default function FavoritesContextProvider(props) {
     }
 
     const removeProduct = (productId) => {
-        //remove this character from state
+        //remove this product from state
         let newFavorites = favorites.filter(item=>item.id !== productId)
         //store in state
         setFavorites(newFavorites)

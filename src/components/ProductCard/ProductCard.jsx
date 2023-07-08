@@ -1,24 +1,33 @@
-//import React from 'react';
+import { useEffect, useState, useContext} from 'react';
 import './ProductCard.css';
 import { FaHeart, FaRegHeart } from "react-icons/fa"
 // import { BiSolidHeartCircle } from "react-icons/bi";
-import {useContext} from "react";
 import {FavoritesContext} from "../../Context/Context.jsx";
 
 
 
 const ProductCard = ({ product }) => {
     // start with var for icons
-    const isFavorite = false;
+    // const isFavorite = false;
+    const [isSelected, setIsSelected] = useState(false);
     // access the Global context. Use {} not []
-    const {favorites, addProduct} = useContext(FavoritesContext);
+    const {favorites, addProduct, removeProduct} = useContext(FavoritesContext);
+
+    //need use effect to set the value of isSelected
+    useEffect(
+        ()=>{
+            //is already this product selected?
+            setIsSelected(favorites.find(item=>item.id === product.id))
+        }, [favorites]
+    )
 
     return (
         <div className="product-card">
             <div className="image-container">
                 {
-                    isFavorite?
-                        <FaHeart className="prod-heart-icon" />
+                    isSelected?
+                        <FaHeart className="prod-heart-icon"
+                        onClick={()=>removeProduct(product.id)}/>
                         :
                         <FaRegHeart className="prod-heart-icon"
                         onClick={()=>addProduct(product)}/>

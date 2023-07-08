@@ -4,14 +4,22 @@ import {FavoritesContext} from "../../Context/Context.jsx";
 import { BsTrash } from "react-icons/bs";
 
 
+
+
 const Checkout = () => {
     // this page shows all the selected products
 
     // access the Global context. Use {} not []
-    const {favorites} = useContext(FavoritesContext);
+    const {favorites, removeProduct} = useContext(FavoritesContext);
 
     //Calculate the total of the shopping basket
     const total = favorites.reduce((acc, item) => acc + item.price, 0).toFixed(2);
+
+    const handleRemoveProduct = (productId) => {
+        removeProduct(productId);
+    };
+
+
 
     return (
         <div className="shopping-cart-page">
@@ -41,7 +49,8 @@ const Checkout = () => {
                                     <td>{item.price + "€"}</td>
                                     <td>1</td>
                                     <td>
-                                        <BsTrash className="trash-icon" style={{width:"4dvw", height:"4dvh"}}/>
+                                        <BsTrash className="trash-icon" style={{ height: "41px", width: "32px"}}
+                                                 onClick={() => handleRemoveProduct(item.id)}/>
                                     </td>
                                 </tr>
                             ))
